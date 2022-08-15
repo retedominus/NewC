@@ -41,3 +41,25 @@ for (int i = 2; i <= 10; i++)
     }
     System.Console.WriteLine();
 }
+
+//Замена слов в тексте
+string Replace(string text, char oldValue, char newValue)
+{
+    string result = String.Empty;
+    int length = text.Length;
+    for (int i = 0; i < length; i++)
+    {
+        if (text[i] == oldValue) result = result + $"{newValue}";
+        else result = result + $"{text[i]}";
+    }
+    return result;
+}
+string text = "— Скажи-ка, дядя, ведь не даром "
+            + "Москва, спаленная пожаром, "
+            + "Французу отдана? "
+            + "Ведь были ж схватки боевые, "
+            + "Да, говорят, еще какие! "
+            + "Недаром помнит вся Россия "
+            + "Про день Бородина! ";
+string newText = Replace(text, ' ', '/');
+System.Console.WriteLine(newText);
