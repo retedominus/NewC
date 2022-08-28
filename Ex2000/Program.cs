@@ -5,7 +5,6 @@ int[] strToInt(string a)
 
     string[] b = a.Split(",");
     int[] c = new int[b.Length];
-    // что делает эта строка? что означает new?
     for (int i = 0; i < b.Length; i++)
     {
         c[i] = Convert.ToInt32(b[i]);
@@ -15,7 +14,7 @@ int[] strToInt(string a)
 
 int[] SumMatrix(int[] m1, int[] m2)
 {
-    int[] sum = new int[m1.Length];//????
+    int[] sum = new int[m1.Length];
     for (int j = 0; j < m1.Length; j++)
     {
         sum[j] = m1[j] + m2[j];
